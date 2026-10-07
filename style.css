@@ -199,3 +199,33 @@ li {
         grid-template-columns: 1fr 1fr;
     }
 }
+@media print {
+    body {
+        background: white;
+        color: black;
+        font-size: 12pt;
+    }
+    .resume-footer, .social-links img {
+        display: none; 
+    }
+    a {
+        text-decoration: underline;
+        color: black;
+    }
+}
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+    h2 {
+        font-size: 1.1rem;
+    }
+    .skills-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+}

@@ -199,18 +199,33 @@ li {
         grid-template-columns: 1fr 1fr;
     }
 }
+/* ==========================================================================
+   TASK 3 UPGRADES: PRINT LAYOUT & MOBILE OPTIMIZATION
+   ========================================================================== */
+
+/* 1. Print-Friendly Layout: Optimizes the layout when someone prints or saves as PDF */
 @media print {
     body {
         background: white;
         color: black;
         font-size: 12pt;
     }
-    .resume-footer, .social-links img {
-        display: none; 
+    
+    /* Strips out the dark background block so your text displays cleanly */
+    .resume-footer {
+        background: none !important;
+        color: black !important;
+        padding: 10px 0 !important;
+        margin-top: 20px !important;
+        border-top: 1px solid #ccc !important;
     }
-    a {
-        text-decoration: underline;
-        color: black;
+
+    .resume-footer a {
+        color: black !important;
+        text-decoration: underline !important;
+    }
+    .social-links img {
+        display: none !important; 
     }
 }
 @media (max-width: 480px) {
@@ -229,3 +244,4 @@ li {
         gap: 15px;
     }
 }
+
